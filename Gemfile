@@ -37,3 +37,4 @@ group :production do
   gem 'therubyracer', :require => false  # javascript for pre-compiling assets on the server
 end
 
+gem 'open4'
