@@ -29,3 +29,11 @@ gem 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+# bvm
+gem 'capistrano'
+gem 'rubber'
+group :production do
+  gem 'therubyracer', :require => false  # javascript for pre-compiling assets on the server
+end
+
