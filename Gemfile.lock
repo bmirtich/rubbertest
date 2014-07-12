@@ -130,6 +130,7 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano
+  open4
   rails (= 3.0.9)
   rubber
   sqlite3
