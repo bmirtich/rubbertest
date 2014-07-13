@@ -1,0 +1,76 @@
+--- 
+- !ruby/object:Rubber::Configuration::InstanceItem 
+  domain: foo.com
+  external_host: ec2-54-191-101-80.us-west-2.compute.amazonaws.com
+  external_ip: 54.191.101.80
+  image_id: ami-b5a9d485
+  image_type: t2.micro
+  instance_id: i-9d72ec90
+  internal_host: ip-172-31-17-143.us-west-2.compute.internal
+  internal_ip: 172.31.17.143
+  name: cms1
+  platform: linux
+  provider: aws
+  roles: 
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: "\xE2\x80\x9Cweb"
+    options: {}
+
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: app
+    options: {}
+
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: passenger
+    options: {}
+
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: apache
+    options: {}
+
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: web_tools
+    options: {}
+
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: graphite_server
+    options: {}
+
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: graphite_web
+    options: {}
+
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: db
+    options: 
+      primary: "true\xE2\x80\x9D"
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: db
+    options: 
+      primary: true
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: postgresql
+    options: {}
+
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: postgresql_master
+    options: {}
+
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: collectd
+    options: {}
+
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: monit
+    options: {}
+
+  root_device_type: ebs
+  security_groups: 
+  - default
+  - web_tools
+  static_ip: 54.191.101.80
+  zone: us-west-2a
+- volumes: {}
+
+  static_ips: 
+    cms1: 54.191.101.80
