@@ -92,7 +92,19 @@ cloud_providers:
     # image_id: ami-d13845e1
     # image_id: ami-8daed3bd 
     # image_id: ami-77d7a747  Red Hat Enterprise Linux 7.0 (HVM).  Can be created but can't connect
-    image_id: ami-b5a9d485   # Ubuntu 64-bit machine (works!)
+
+    # Ubuntu 64-bit 14.04 machine.  Works through most of bootstrap
+    #  process but then get stuck on apache install.  Because ubuntu
+    #  14.04 isnot yet supported by rubber.  Latest Ubuntu versino
+    #  supported by rubber is 12.04.  See
+    #  https://github.com/rubber/rubber/issues/478
+    # image_id: ami-b5a9d485
+
+    # Ubuntu 12.04.  See
+    # http://askubuntu.com/questions/53582/how-do-i-know-what-ubuntu-ami-to-launch-on-ec2.
+    # Also needs to have virtualization type 'hvm' to support
+    # t2.micro, as indicated by AWS API error.
+    image_id: ami-0be2743b
 
     # OPTIONAL: EC2 spot instance request support.
     #

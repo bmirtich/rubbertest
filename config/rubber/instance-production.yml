@@ -1,13 +1,13 @@
 --- 
 - !ruby/object:Rubber::Configuration::InstanceItem 
   domain: foo.com
-  external_host: ec2-54-191-101-80.us-west-2.compute.amazonaws.com
-  external_ip: 54.191.101.80
-  image_id: ami-b5a9d485
+  external_host: ec2-54-191-141-29.us-west-2.compute.amazonaws.com
+  external_ip: 54.191.141.29
+  image_id: ami-0be2743b
   image_type: t2.micro
-  instance_id: i-9d72ec90
-  internal_host: ip-172-31-17-143.us-west-2.compute.internal
-  internal_ip: 172.31.17.143
+  instance_id: i-1649d01b
+  internal_host: ip-172-31-31-251.us-west-2.compute.internal
+  internal_ip: 172.31.31.251
   name: cms1
   platform: linux
   provider: aws
@@ -68,9 +68,9 @@
   security_groups: 
   - default
   - web_tools
-  static_ip: 54.191.101.80
+  static_ip: 54.191.141.29
   zone: us-west-2a
 - volumes: {}
 
   static_ips: 
-    cms1: 54.191.101.80
+    cms1: 54.191.141.29
